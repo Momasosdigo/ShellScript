@@ -15,14 +15,14 @@ name=0
 ############
 
 while [ "$op" != 3 ]; do
-    echo -e "\033[1m*--------------------------------*\033[0m"
-    echo -e "\033[1m|          \033[3mBienvenido\033[0m            \033[1m|\033[0m"
-    echo -e "\033[1m|                                |\033[0m "
-    echo -e "\033[1m|\033[0m  1. Ver usarios en el sistema   \033[1m|\033[0m "
-    echo -e "\033[1m|\033[0m  2. Administrador de tareas    \033[1m|\033[0m "
-    echo -e "\033[1m|\033[0m  3. Iniciar y detener procesos \033[1m|\033[0m "
-    echo -e "\033[1m|\033[0m  4. Salir                      \033[1m|\033[0m "
-    echo -e "\033[1m*--------------------------------*\033[0m "
+    echo -e "*-------------------------------*"
+    echo -e "|          \033[1m\033[3mBienvenido\033[0m           |"
+    echo -e "|                               |"
+    echo -e "| 1. Ver usarios en el sistema  |"
+    echo -e "| 2. Administrador de tareas    |"
+    echo -e "| 3. Iniciar y detener procesos |"
+    echo -e "| 4. Salir                      |"
+    echo -e "*-------------------------------*"
     read -r -p "=> " op 
     echo
 
