@@ -43,7 +43,7 @@ while [ "$op" != 4 ]; do
                 w
                 echo
             ;;
-
+ 
             2) sleep 1s
                 last
                 sleep 1s
