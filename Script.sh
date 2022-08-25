@@ -4,7 +4,7 @@ clear
 op=0
 name=0
 
-############
+#############
 # ! Reparar la validacion de htop
 # ! Plantear el filtro manuar de tareas PID
 # !! Preparar documentacion y pruebas en caliente !!
@@ -12,7 +12,7 @@ name=0
 # ? Aberiguar rigidez del codigo ante de 28/08
 # todo: Reiteracion de menu con validacion [Terminado] => Pisible mejora a revisar
 # todo: Comprobar ShellCheker para la rigidez a temprana edad de codigo
-############
+#############
 
 while [ "$op" != 4 ]; do
     echo -e "*-------------------------------*"
