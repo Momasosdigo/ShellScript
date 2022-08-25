@@ -2,9 +2,10 @@
 
 clear
 op=0
+op2=0
 name=0
 
-#############
+############
 # ! Reparar la validacion de htop
 # ! Plantear el filtro manuar de tareas PID
 # !! Preparar documentacion y pruebas en caliente !!
@@ -15,7 +16,7 @@ name=0
 #############
 
 while [ "$op" != 4 ]; do
-    echo "*-------------------------------*"
+    echo -e "*-------------------------------*"
     echo -e "|          \033[1m\033[3mBienvenido\033[0m           |"
     echo "|                               |"
     echo "| 1. Ver usarios en el sistema  |"
@@ -60,16 +61,17 @@ while [ "$op" != 4 ]; do
 
     2) #De menu principal
         clear
-        echo "*----------------------------------------------------*"
-        echo "|  1. Mostrar procesos generales [ VISTA SIPLE ]     |"
-        echo "|  2. Mostrar procesos por usuario [ VISTA SIPLE ]   |"
-        echo "|                                                    |"
-        echo "|        [ Vista avanzada del administrador ]        |"
-        echo "|                                                    |"
-        echo "|  3. Mostrar procesos generales  [ VISTA AVANZADA ] |"
-        echo "|  4. Mostrar procesos por usario [ VISTA AVANZADA ] |"
-        echo "|  5. Salir                                          |"
-        echo "*----------------------------------------------------*"
+        echo "*-----------------------------------------------------*"
+        echo "|  1. Mostrar procesos generales   [ VISTA SIPLE ]    |"
+        echo "|  2. Mostrar procesos por usuario [ VISTA SIPLE ]    |"
+        echo "|                                                     |"
+        echo -e "|        \033[1m\033[3m[ Vista avanzada del administrador ]\033[0m         |"
+        echo "|                                                     |"
+        echo "|  3. Mostrar procesos generales  [ VISTA AVANZADA ]  |"
+        echo "|  4. Mostrar procesos por usario [ VISTA AVANZADA ]  |"
+        echo "|  5. Filtrar por procesos                            |"
+        echo "|  6. Salir                                           |"
+        echo "*-----------------------------------------------------*"
         read -r -p "=> " op
         echo
         
@@ -102,7 +104,71 @@ while [ "$op" != 4 ]; do
                 echo
             ;;
 
-            5) #Vuelve al inicio, puesto que al no haber una validación el while se vuelve nulo
+            5)
+               while [ "$op2" != 7 ]; do
+                    clear
+                    echo "*---------------------------------------------*"
+                    echo "|                                             |"
+                    echo -e "|               \033[1m\033[3mFiltro de tareas\033[0m              |"
+                    echo "|                                             |"
+                    echo "| 1. Mostrar uso de CPU   [ VISTA SIPLE ]     |"
+                    echo "| 2. Mostrar uso de RAM   [ VISTA SIPLE ]     |"
+                    echo "| 3. Mostrar uso de Disco [ VISTA SIPLE ]     |"
+                    echo "|                                             |"
+                    echo -e "|    \033[1m\033[3m[ Vista de filtro avanzada ]\033[0m     |"
+                    echo "|                                             |"
+                    echo "| 4. Mostrar uso de CPU   [ VISTA AVANZADA ]  |"
+                    echo "| 5. Mostrar uso de RAM   [ VISTA AVANZADA ]  |"
+                    echo "| 6. Mostrar uso de Disco [ VISTA SIPLE ]     |" #En revision
+                    echo "| 7. Salir                                    |"
+                    echo "*---------------------------------------------*"
+                    read -r -p "=> " op2 
+                    echo
+
+                    case $op2 in
+                        #Vista simple
+                        1)
+                            top -o %CPU
+                        ;;
+                        
+                        2)
+                            top -o %MEM
+                        ;;
+                        
+                        3)
+                            df -h
+                        ;;
+
+                        #Vista avanzada
+                        4)
+                            htop --filter %CPU
+                        ;;
+
+                        5)
+                            htop --filter %MEM
+                        ;;
+
+                        6)
+                            #En revision
+                        ;;
+
+                        7)
+                            read -r -p "Presione cualquier tecla para [ CONTINUAR ]..." op
+                            [ "$op" = true ]
+                            clear
+                        ;;
+
+                        *)
+                            clear
+                            echo "No es una opcion lo que intentas"
+                            sleep 1s
+                            clear
+                        ;;
+                    esac #Final case 5
+                done #Final while 5
+            ;;
+
+            6) #Vuelve al inicio, puesto que al no haber una validación el while se vuelve nulo
                 read -r -p "Presione cualquier tecla para [ CONTINUAR ]..." op
                 [ "$op" = true ]
                 clear
@@ -155,6 +221,7 @@ while [ "$op" != 4 ]; do
         clear
         echo "No es una opcion lo que intentas"
         sleep 1s
-        ;;
+        clear
+    ;;
     esac #Final case
 done #Final while
