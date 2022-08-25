@@ -14,7 +14,7 @@ name=0
 # todo: Comprobar ShellCheker para la rigidez a temprana edad de codigo
 ############
 
-while [ "$op" != 3 ]; do
+while [ "$op" != 4 ]; do
     echo -e "*-------------------------------*"
     echo -e "|          \033[1m\033[3mBienvenido\033[0m           |"
     echo -e "|                               |"
@@ -51,9 +51,9 @@ while [ "$op" != 3 ]; do
             ;;
 
             3)
-                clear
                 read -r -p "Presione cualquier tecla para [ CONTINUAR ]..." op
                 [ "$op" = true ]
+                clear
             ;;
         esac #Final del case 1
     ;;
@@ -103,9 +103,9 @@ while [ "$op" != 3 ]; do
             ;;
 
             5) #Vuelve al inicio, puesto que al no haber una validación el while se vuelve nulo
-                clear
                 read -r -p "Presione cualquier tecla para [ CONTINUAR ]..." op
                 [ "$op" = true ]
+                clear
             ;;
         esac #Final del case 2
     ;;
@@ -138,9 +138,9 @@ while [ "$op" != 3 ]; do
             ;;
 
             3)
-                clear
                 read -r -p "Presione cualquier tecla para [ CONTINUAR ]..." op
                 [ "$op" = true ]
+                clear
             ;;
         esac #Final del case 3
     ;;
