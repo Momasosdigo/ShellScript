@@ -15,14 +15,14 @@ name=0
 #############
 
 while [ "$op" != 4 ]; do
-    echo -e "*-------------------------------*"
+    echo "*-------------------------------*"
     echo -e "|          \033[1m\033[3mBienvenido\033[0m           |"
-    echo -e "|                               |"
-    echo -e "| 1. Ver usarios en el sistema  |"
-    echo -e "| 2. Administrador de tareas    |"
-    echo -e "| 3. Iniciar y detener procesos |"
-    echo -e "| 4. Salir                      |"
-    echo -e "*-------------------------------*"
+    echo "|                               |"
+    echo "| 1. Ver usarios en el sistema  |"
+    echo "| 2. Administrador de tareas    |"
+    echo "| 3. Iniciar y detener procesos |"
+    echo "| 4. Salir                      |"
+    echo "*-------------------------------*"
     read -r -p "=> " op 
     echo
 
