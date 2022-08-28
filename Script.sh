@@ -54,12 +54,12 @@ while [ "$op" != 4 ]; do
     echo -e "\t\t\t\t۞۞۞۞۞۞۞۞۞۞۞۞۞۞"
     echo
     echo -e "\e[0;36m*-------------------------------*\e[0m"
-    echo -e "\e[0;36m|\e[0m          \e[0;31m\033[5m\033[3mBienvenido\033[0m           \e[0;36m|\e[0m"
-    echo -e "\e[0;36m|                               |\e[0m"
-    echo -e "\e[0;36m| 1. Ver usarios en el sistema  |\e[0m"
-    echo -e "\e[0;36m| 2. Administrador de tareas    |\e[0m"
-    echo -e "\e[0;36m| 3. Iniciar y detener procesos |\e[0m"
-    echo -e "\e[0;36m| 4. Salir                      |\e[0m"
+    echo -e "\e[0;36m|\e[0m          \e[1;31m\033[5m\033[3mBienvenido\033[0m           \e[0;36m|\e[0m"
+    echo -e "\e[0;36m|\e[0m                               \e[0;36m|\e[0m"
+    echo -e "\e[0;36m|\e[0m 1. Ver usarios en el sistema  \e[0;36m|\e[0m"
+    echo -e "\e[0;36m|\e[0m 2. Administrador de tareas    \e[0;36m|\e[0m"
+    echo -e "\e[0;36m|\e[0m 3. Iniciar y detener procesos \e[0;36m|\e[0m"
+    echo -e "\e[0;36m|\e[0m 4. Salir                      \e[0;36m|\e[0m"
     echo -e "\e[0;36m*-------------------------------*\e[0m"
     read -r -p "=> " op 
     echo
@@ -67,10 +67,10 @@ while [ "$op" != 4 ]; do
     case $op in
     1) #De menu principal
         clear
-        echo -e "\e[0;33m*---------------------------------------*\e[0m"
-        echo -e "\e[0;33m|\e[0m \e[1;36m1. Mostrar usuarios actuales\e[0m          \e[0;33m|\e[0m"
-        echo -e "\e[0;33m|\e[0m \e[1;36m2. Mostrar usuarios antes conectados\e[0m  \e[0;33m|\e[0m"
-        echo -e "\e[0;33m|\e[0m \e[1;36m3. Salir\e[0m                              \e[0;33m|\e[0m"
+        echo -e "\e[0;33m\033[1m*---------------------------------------*\e[0m"
+        echo -e "\e[0;33m\033[1m|\e[0m \e[1;36m1. Mostrar usuarios actuales\e[0m          \e[0;33m|\e[0m"
+        echo -e "\e[0;33m\033[1m|\e[0m \e[1;36m2. Mostrar usuarios antes conectados\e[0m  \e[0;33m\033[1m|\e[0m"
+        echo -e "\e[0;33m\033[1m|\e[0m \e[1;36m3. Salir\e[0m                              \e[0;33m\033[1m|\e[0m"
         echo -e "\e[0;33m*---------------------------------------*\e[0m"
         read -r -p "=> " op
         echo
@@ -98,17 +98,17 @@ while [ "$op" != 4 ]; do
 
     2) #De menu principal
         clear
-        echo -e "*-----------------------------------------------------*"
-        echo -e "|  1. Mostrar procesos generales   [ VISTA SIPLE ]    |"
-        echo -e "|  2. Mostrar procesos por usuario [ VISTA SIPLE ]    |"
-        echo -e "|                                                     |"
-        echo -e "|        \e[0;32m\033[1m\033[4m\033[3m[ Vista avanzada del administrador ]\033[0m         |"
-        echo -e "|                                                     |"
-        echo -e "|  3. Mostrar procesos generales  \033[5m\e[1;31m[ VISTA AVANZADA ]\e[0m  |"
-        echo -e "|  4. Mostrar procesos por usario \033[5m\e[1;31m[ VISTA AVANZADA ]\e[0m  |"
-        echo -e "|  5. Filtrar por procesos                            |"
-        echo -e "|  6. Salir                                           |"
-        echo -e "*-----------------------------------------------------*"
+        echo -e "\e[0;33m\033[1m*-----------------------------------------------------*\e[0m\033[0m"
+        echo -e "\e[0;33m\033[1m|\e[0m  1. Mostrar procesos generales   \e[1;34m[ VISTA SIPLE ]\e[0m    \e[0;33m\033[1m|\e[0m\033[0m"
+        echo -e "\e[0;33m\033[1m|\e[0m\033[0m  2. Mostrar procesos por usuario \e[1;34m[ VISTA SIPLE ]\e[0m    \e[0;33m\033[1m|\e[0m\033[0m"
+        echo -e "\e[0;33m\033[1m|\e[0m\033[0m                                                     \e[0;33m\033[1m|\e[0m\033[0m"
+        echo -e "\e[0;33m\033[1m|\e[0m\033[0m        \e[0;32m\033[1m\033[4m\033[3m[ Vista avanzada del administrador ]\033[0m         \e[0;33m\033[1m|\e[0m\033[0m"
+        echo -e "\e[0;33m\033[1m|\e[0m\033[0m                                                     \e[0;33m\033[1m|\e[0m\033[0m"
+        echo -e "\e[0;33m\033[1m|\e[0m\033[0m  3. Mostrar procesos generales  \033[5m\e[1;31m[ VISTA AVANZADA ]\e[0m  \e[0;33m\033[1m|\e[0m\033[0m"
+        echo -e "\e[0;33m\033[1m|\e[0m\033[0m  4. Mostrar procesos por usario \033[5m\e[1;31m[ VISTA AVANZADA ]\e[0m  \e[0;33m\033[1m|\e[0m\033[0m"
+        echo -e "\e[0;33m\033[1m|\e[0m\033[0m  5. Filtrar por procesos                            \e[0;33m\033[1m|\e[0m\033[0m"
+        echo -e "\e[0;33m\033[1m|\e[0m\033[0m  6. Salir                                           \e[0;33m\033[1m|\e[0m\033[0m"
+        echo -e "\e[0;33m\033[1m*-----------------------------------------------------*\e[0m\033[0m"
         read -r -p "=> " op
         echo
         
@@ -120,7 +120,7 @@ while [ "$op" != 4 ]; do
             ;;
 
             2) sleep 1s
-                echo "Ingrece el nombre del usuario que decea ver sus procesos"
+                echo -e "\e[1;36m Ingrece el nombre del \033[4musuario\033[0m \e[1;36mque decea ver sus procesos \e[0m"
                 read -r -p "=> " name
                 top -u "$name"
                 echo
@@ -135,30 +135,29 @@ while [ "$op" != 4 ]; do
             ;;
 
             4) sleep 1s
-                echo "Ingrece el nombre del usuario que decea ver sus procesos"
+                echo -e "\e[1;36m Ingrece el nombre del \033[4musuario\033[0m \e[1;36mque decea ver sus procesos \e[0m"
                 read -r -p "=> " name
                 htop -u "$name"
                 echo
             ;;
 
             5)
-               while [ "$op2" != 7 ]; do
+               while [ "$op2" != 6 ]; do
                     clear
-                    echo "*---------------------------------------------*"
-                    echo "|                                             |"
-                    echo -e "|               \033[1m\033[3mFiltro de tareas\033[0m              |"
-                    echo "|                                             |"
-                    echo "| 1. Mostrar uso de CPU   [ VISTA SIPLE ]     |"
-                    echo "| 2. Mostrar uso de RAM   [ VISTA SIPLE ]     |"
-                    echo "| 3. Mostrar uso de Disco [ VISTA SIPLE ]     |"
-                    echo "|                                             |"
-                    echo -e "|    \033[1m\033[3m[ Vista de filtro avanzada ]\033[0m     |"
-                    echo "|                                             |"
-                    echo "| 4. Mostrar uso de CPU   [ VISTA AVANZADA ]  |"
-                    echo "| 5. Mostrar uso de RAM   [ VISTA AVANZADA ]  |"
-                    echo "| 6. Mostrar uso de Disco [ VISTA SIPLE ]     |" #En revision
-                    echo "| 7. Salir                                    |"
-                    echo "*---------------------------------------------*"
+                    echo -e "*---------------------------------------------*"
+                    echo -e "|                                             |"
+                    echo -e "|              \033[1m\033[3mFiltro de tareas\033[0m               |"
+                    echo -e "|                                             |"
+                    echo -e "| 1. Mostrar uso de CPU   \e[1;34m[ VISTA SIPLE ]\e[0m     |"
+                    echo -e "| 2. Mostrar uso de RAM   \e[1;34m[ VISTA SIPLE ]\e[0m     |"
+                    echo -e "| 3. Mostrar uso de Disco \e[1;34m[ VISTA SIPLE ]\e[0m     |"
+                    echo -e "|                                             |"
+                    echo -e "|        \e[0;32m\033[1m\033[4m\033[3m[ Vista de filtro avanzada ]\033[0m         |"
+                    echo -e "|                                             |"
+                    echo -e "| 4. Mostrar uso de CPU   \033[5m\e[1;31m[ VISTA AVANZADA ]\e[0m  |"
+                    echo -e "| 5. Mostrar uso de RAM   \033[5m\e[1;31m[ VISTA AVANZADA ]\e[0m  |"
+                    echo -e "| 6. Salir                                    |"
+                    echo -e "*---------------------------------------------*"
                     read -r -p "=> " op2 
                     echo
 
@@ -186,10 +185,6 @@ while [ "$op" != 4 ]; do
                         ;;
 
                         6)
-                            #En revision
-                        ;;
-
-                        7)
                             read -r -p "Presione cualquier tecla para [ CONTINUAR ]..." op
                             [ "$op" = true ]
                             clear
