@@ -5,7 +5,36 @@ op=0
 op2=0
 name=0
 
-############
+############ Estilos:
+#######
+# \033[1m Estilo normal \033[0m
+# \033[1m Negrita \033[0m
+# \033[2m Dim \033[0m
+# \033[4m Subrayado \033[0m
+# \033[5m Parpadeo \033[0m
+# \033[7m Inverso \033[0m
+# \033[8m Invisible \033[0m
+######
+############ Colores:
+######
+# \e[0;30m Negro \e[0m
+# \e[1;30m Gris oscuro \e[0m
+# \e[0;34m Azul \e[0m
+# \e[1;34m Azlul resaltado \e[0m
+# \e[0;32m Verde \e[0m
+# \e[1;32m Verde resaltado \e[0m
+# \e[0;36m Cian \e[0m
+# \e[1;36m Cian resaltado \e[0m
+# \e[0;31m Rojo \e[0m
+# \e[1;31m Rojo resaltado \e[0m
+# \e[0;35m Púrpura \e[0m
+# \e[1;35m Púrpura resaltado \e[0m
+# \e[0;33m Cafe \e[0m
+# \e[1;33m Amarillo \e[0m
+# \e[0;37m Gris \e[0m
+# \e[1;37m Blanco \e[0m
+######
+############ To Do List:
 # ! Reparar la validacion de htop
 # ! Plantear el filtro manuar de tareas PID
 # !! Preparar documentacion y pruebas en caliente !!
@@ -16,25 +45,33 @@ name=0
 #############
 
 while [ "$op" != 4 ]; do
-    echo -e "*-------------------------------*"
-    echo -e "|          \033[1m\033[3mBienvenido\033[0m           |"
-    echo "|                               |"
-    echo "| 1. Ver usarios en el sistema  |"
-    echo "| 2. Administrador de tareas    |"
-    echo "| 3. Iniciar y detener procesos |"
-    echo "| 4. Salir                      |"
-    echo "*-------------------------------*"
+    clear
+    echo -e "\t\t\t\t۞۞۞۞۞۞۞۞۞۞۞۞۞۞"
+    echo -e "\t\t\t\t  \033[1m\033[4mPROYECTO HECHO POR:\e[0m  "
+    echo -e "\t\t\t\t \e[0;31m   Carlos Gonzalez\e[0m      "
+    echo -e "\t\t\t\t \e[0;32m  Micaela Rodriguez\e[0m    "
+    echo -e "\t\t\t\t \e[0;34m    Luis Vergara\e[0m         "
+    echo -e "\t\t\t\t۞۞۞۞۞۞۞۞۞۞۞۞۞۞"
+    echo
+    echo -e "\e[0;36m*-------------------------------*\e[0m"
+    echo -e "\e[0;36m|\e[0m          \e[0;31m\033[5m\033[3mBienvenido\033[0m           \e[0;36m|\e[0m"
+    echo -e "\e[0;36m|                               |\e[0m"
+    echo -e "\e[0;36m| 1. Ver usarios en el sistema  |\e[0m"
+    echo -e "\e[0;36m| 2. Administrador de tareas    |\e[0m"
+    echo -e "\e[0;36m| 3. Iniciar y detener procesos |\e[0m"
+    echo -e "\e[0;36m| 4. Salir                      |\e[0m"
+    echo -e "\e[0;36m*-------------------------------*\e[0m"
     read -r -p "=> " op 
     echo
 
     case $op in
     1) #De menu principal
         clear
-        echo "*---------------------------------------*"
-        echo "| 1. Mostrar usuarios actuales          |"
-        echo "| 2. Mostrar usuarios antes conectados  |"
-        echo "| 3. Salir                              |"
-        echo "*---------------------------------------*"
+        echo -e "\e[0;33m*---------------------------------------*\e[0m"
+        echo -e "\e[0;33m|\e[0m \e[1;36m1. Mostrar usuarios actuales\e[0m          \e[0;33m|\e[0m"
+        echo -e "\e[0;33m|\e[0m \e[1;36m2. Mostrar usuarios antes conectados\e[0m  \e[0;33m|\e[0m"
+        echo -e "\e[0;33m|\e[0m \e[1;36m3. Salir\e[0m                              \e[0;33m|\e[0m"
+        echo -e "\e[0;33m*---------------------------------------*\e[0m"
         read -r -p "=> " op
         echo
         
@@ -61,17 +98,17 @@ while [ "$op" != 4 ]; do
 
     2) #De menu principal
         clear
-        echo "*-----------------------------------------------------*"
-        echo "|  1. Mostrar procesos generales   [ VISTA SIPLE ]    |"
-        echo "|  2. Mostrar procesos por usuario [ VISTA SIPLE ]    |"
-        echo "|                                                     |"
-        echo -e "|        \033[1m\033[3m[ Vista avanzada del administrador ]\033[0m         |"
-        echo "|                                                     |"
-        echo "|  3. Mostrar procesos generales  [ VISTA AVANZADA ]  |"
-        echo "|  4. Mostrar procesos por usario [ VISTA AVANZADA ]  |"
-        echo "|  5. Filtrar por procesos                            |"
-        echo "|  6. Salir                                           |"
-        echo "*-----------------------------------------------------*"
+        echo -e "*-----------------------------------------------------*"
+        echo -e "|  1. Mostrar procesos generales   [ VISTA SIPLE ]    |"
+        echo -e "|  2. Mostrar procesos por usuario [ VISTA SIPLE ]    |"
+        echo -e "|                                                     |"
+        echo -e "|        \e[0;32m\033[1m\033[4m\033[3m[ Vista avanzada del administrador ]\033[0m         |"
+        echo -e "|                                                     |"
+        echo -e "|  3. Mostrar procesos generales  \033[5m\e[1;31m[ VISTA AVANZADA ]\e[0m  |"
+        echo -e "|  4. Mostrar procesos por usario \033[5m\e[1;31m[ VISTA AVANZADA ]\e[0m  |"
+        echo -e "|  5. Filtrar por procesos                            |"
+        echo -e "|  6. Salir                                           |"
+        echo -e "*-----------------------------------------------------*"
         read -r -p "=> " op
         echo
         
