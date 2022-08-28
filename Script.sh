@@ -56,7 +56,7 @@ while [ "$op" != 4 ]; do
     echo -e "\e[0;36m*-------------------------------*\e[0m"
     echo -e "\e[0;36m|\e[0m          \e[1;31m\033[5m\033[3mBienvenido\033[0m           \e[0;36m|\e[0m"
     echo -e "\e[0;36m|\e[0m                               \e[0;36m|\e[0m"
-    echo -e "\e[0;36m|\e[0m 1. Ver usarios en el sistema  \e[0;36m|\e[0m"
+    echo -e "\e[0;36m|\e[0m 1. Ver usuarios en el sistema  \e[0;36m|\e[0m"
     echo -e "\e[0;36m|\e[0m 2. Administrador de tareas    \e[0;36m|\e[0m"
     echo -e "\e[0;36m|\e[0m 3. Iniciar y detener procesos \e[0;36m|\e[0m"
     echo -e "\e[0;36m|\e[0m 4. Salir                      \e[0;36m|\e[0m"
@@ -100,7 +100,7 @@ while [ "$op" != 4 ]; do
         clear
         echo -e "\e[0;33m\033[1m*-----------------------------------------------------*\e[0m\033[0m"
         echo -e "\e[0;33m\033[1m|\e[0m  1. Mostrar procesos generales   \e[1;34m[ VISTA SIPLE ]\e[0m    \e[0;33m\033[1m|\e[0m\033[0m"
-        echo -e "\e[0;33m\033[1m|\e[0m\033[0m  2. Mostrar procesos por usuario \e[1;34m[ VISTA SIPLE ]\e[0m    \e[0;33m\033[1m|\e[0m\033[0m"
+        echo -e "\e[0;33m\033[1m|\e[0m\033[0m  2. Mostrar procesos por usuario \e[1;34m[ VISTA SIMPLE ]\e[0m    \e[0;33m\033[1m|\e[0m\033[0m"
         echo -e "\e[0;33m\033[1m|\e[0m\033[0m                                                     \e[0;33m\033[1m|\e[0m\033[0m"
         echo -e "\e[0;33m\033[1m|\e[0m\033[0m        \e[0;32m\033[1m\033[4m\033[3m[ Vista avanzada del administrador ]\033[0m         \e[0;33m\033[1m|\e[0m\033[0m"
         echo -e "\e[0;33m\033[1m|\e[0m\033[0m                                                     \e[0;33m\033[1m|\e[0m\033[0m"
@@ -120,7 +120,7 @@ while [ "$op" != 4 ]; do
             ;;
 
             2) sleep 1s
-                echo -e "\e[1;36m Ingrece el nombre del \033[4musuario\033[0m \e[1;36mque decea ver sus procesos \e[0m"
+                echo -e "\e[1;36m Ingrese el nombre del \033[4musuario\033[0m \e[1;36mque desea ver sus procesos \e[0m"
                 read -r -p "=> " name
                 top -u "$name"
                 echo
@@ -135,7 +135,7 @@ while [ "$op" != 4 ]; do
             ;;
 
             4) sleep 1s
-                echo -e "\e[1;36m Ingrece el nombre del \033[4musuario\033[0m \e[1;36mque decea ver sus procesos \e[0m"
+                echo -e "\e[1;36m Ingrese el nombre del \033[4musuario\033[0m \e[1;36mque desea ver sus procesos \e[0m"
                 read -r -p "=> " name
                 htop -u "$name"
                 echo
@@ -148,9 +148,9 @@ while [ "$op" != 4 ]; do
                     echo -e "|                                             |"
                     echo -e "|              \033[1m\033[3mFiltro de tareas\033[0m               |"
                     echo -e "|                                             |"
-                    echo -e "| 1. Mostrar uso de CPU   \e[1;34m[ VISTA SIPLE ]\e[0m     |"
-                    echo -e "| 2. Mostrar uso de RAM   \e[1;34m[ VISTA SIPLE ]\e[0m     |"
-                    echo -e "| 3. Mostrar uso de Disco \e[1;34m[ VISTA SIPLE ]\e[0m     |"
+                    echo -e "| 1. Mostrar uso de CPU   \e[1;34m[ VISTA SIMPLE ]\e[0m     |"
+                    echo -e "| 2. Mostrar uso de RAM   \e[1;34m[ VISTA SIMPLE ]\e[0m     |"
+                    echo -e "| 3. Mostrar uso de Disco \e[1;34m[ VISTA SIMPLE ]\e[0m     |"
                     echo -e "|                                             |"
                     echo -e "|        \e[0;32m\033[1m\033[4m\033[3m[ Vista de filtro avanzada ]\033[0m         |"
                     echo -e "|                                             |"
@@ -221,7 +221,7 @@ while [ "$op" != 4 ]; do
         case $op in 
             1) sleep 1s
                 echo "Para cerrar procesos sera necesario el numero PID el cual"
-                echo "es el Identificad de procesos (Process Indentifiers). "
+                echo "es el, Identificad de procesos (Process Indentifiers). "
                 echo "Puedes abrir el administrador de tareas anterior y comprobar el PID"
                 read -r -p "PID => " pid
                 kill "$pid"
