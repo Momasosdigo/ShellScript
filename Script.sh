@@ -56,7 +56,7 @@ while [ "$op" != 4 ]; do
     echo -e "\e[0;36m*-------------------------------*\e[0m"
     echo -e "\e[0;36m|\e[0m          \e[1;31m\033[5m\033[3mBienvenido\033[0m           \e[0;36m|\e[0m"
     echo -e "\e[0;36m|\e[0m                               \e[0;36m|\e[0m"
-    echo -e "\e[0;36m|\e[0m 1. Ver usuarios en el sistema  \e[0;36m|\e[0m"
+    echo -e "\e[0;36m|\e[0m 1. Ver usuarios en el sistema \e[0;36m|\e[0m"
     echo -e "\e[0;36m|\e[0m 2. Administrador de tareas    \e[0;36m|\e[0m"
     echo -e "\e[0;36m|\e[0m 3. Iniciar y detener procesos \e[0;36m|\e[0m"
     echo -e "\e[0;36m|\e[0m 4. Salir                      \e[0;36m|\e[0m"
@@ -68,10 +68,10 @@ while [ "$op" != 4 ]; do
     1) #De menu principal
         clear
         echo -e "\e[0;33m\033[1m*---------------------------------------*\e[0m"
-        echo -e "\e[0;33m\033[1m|\e[0m \e[1;36m1. Mostrar usuarios actuales\e[0m          \e[0;33m|\e[0m"
-        echo -e "\e[0;33m\033[1m|\e[0m \e[1;36m2. Mostrar usuarios antes conectados\e[0m  \e[0;33m\033[1m|\e[0m"
-        echo -e "\e[0;33m\033[1m|\e[0m \e[1;36m3. Salir\e[0m                              \e[0;33m\033[1m|\e[0m"
-        echo -e "\e[0;33m*---------------------------------------*\e[0m"
+        echo -e "\e[0;33m\033[1m|\e[0m 1. Mostrar usuarios actuales          \e[0;33m\033[1m|\e[0m"
+        echo -e "\e[0;33m\033[1m|\e[0m 2. Mostrar usuarios antes conectados  \e[0;33m\033[1m|\e[0m"
+        echo -e "\e[0;33m\033[1m|\e[0m 3. Salir                              \e[0;33m\033[1m|\e[0m"
+        echo -e "\e[0;33m\033[1m*---------------------------------------*\e[0m"
         read -r -p "=> " op
         echo
         
@@ -93,14 +93,24 @@ while [ "$op" != 4 ]; do
                 [ "$op" = true ]
                 clear
             ;;
+            
+            *)
+                clear
+                echo
+                echo -e "\e[1;35m\033[4mNo es una opcion lo que intentas\e[0m\033[0m"
+                echo
+                sleep 2s
+                clear
+                [ "$op" = true ]
+            ;;
         esac #Final del case 1
     ;;
 
     2) #De menu principal
         clear
         echo -e "\e[0;33m\033[1m*-----------------------------------------------------*\e[0m\033[0m"
-        echo -e "\e[0;33m\033[1m|\e[0m  1. Mostrar procesos generales   \e[1;34m[ VISTA SIPLE ]\e[0m    \e[0;33m\033[1m|\e[0m\033[0m"
-        echo -e "\e[0;33m\033[1m|\e[0m\033[0m  2. Mostrar procesos por usuario \e[1;34m[ VISTA SIMPLE ]\e[0m    \e[0;33m\033[1m|\e[0m\033[0m"
+        echo -e "\e[0;33m\033[1m|\e[0m  1. Mostrar procesos generales   \e[1;34m[ VISTA SIMPLE ]\e[0m   \e[0;33m\033[1m|\e[0m\033[0m"
+        echo -e "\e[0;33m\033[1m|\e[0m\033[0m  2. Mostrar procesos por usuario \e[1;34m[ VISTA SIMPLE ]\e[0m   \e[0;33m\033[1m|\e[0m\033[0m"
         echo -e "\e[0;33m\033[1m|\e[0m\033[0m                                                     \e[0;33m\033[1m|\e[0m\033[0m"
         echo -e "\e[0;33m\033[1m|\e[0m\033[0m        \e[0;32m\033[1m\033[4m\033[3m[ Vista avanzada del administrador ]\033[0m         \e[0;33m\033[1m|\e[0m\033[0m"
         echo -e "\e[0;33m\033[1m|\e[0m\033[0m                                                     \e[0;33m\033[1m|\e[0m\033[0m"
@@ -192,8 +202,10 @@ while [ "$op" != 4 ]; do
 
                         *)
                             clear
-                            echo "No es una opcion lo que intentas"
-                            sleep 1s
+                            echo
+                            echo -e "\e[1;35m\033[4mNo es una opcion lo que intentas\e[0m\033[0m"
+                            echo
+                            sleep 2s
                             clear
                         ;;
                     esac #Final case 5
@@ -205,16 +217,26 @@ while [ "$op" != 4 ]; do
                 [ "$op" = true ]
                 clear
             ;;
+            
+            *)
+                clear
+                echo
+                echo -e "\e[1;35m\033[4mNo es una opcion lo que intentas\e[0m\033[0m"
+                echo
+                sleep 2s
+                clear
+                [ "$op" = true ]
+            ;;
         esac #Final del case 2
     ;;
 
     3) #De menu principal
         clear
-        echo "*--------------------------------------*"
-        echo "| 1. Cerrar procesos [ NECESARIO PID ] |"
-        echo "| 2. Iniciar aplicaciones              |"
-        echo "| 3. Salir                             |"
-        echo "*--------------------------------------*"
+        echo -e "\e[1;33m\033[1m*--------------------------------------*\e[0m"
+        echo -e "\e[1;33m\033[1m|\e[0m 1. Cerrar procesos \e[1;32m[ NECESARIO PID ]\e[0m \e[1;33m\033[1m|\e[0m"
+        echo -e "\e[1;33m\033[1m|\e[0m 2. Iniciar aplicaciones              \e[1;33m\033[1m|\e[0m"
+        echo -e "\e[1;33m\033[1m|\e[0m 3. Salir                             \e[1;33m\033[1m|\e[0m"
+        echo -e "\e[1;33m\033[1m*--------------------------------------*\e[0m"
         read -r -p "=> " op
         echo
         
@@ -240,6 +262,16 @@ while [ "$op" != 4 ]; do
                 [ "$op" = true ]
                 clear
             ;;
+
+            *)
+                clear
+                echo
+                echo -e "\e[1;35m\033[4mNo es una opcion lo que intentas\e[0m\033[0m"
+                echo
+                sleep 2s
+                clear
+                [ "$op" = true ]
+            ;;
         esac #Final del case 3
     ;;
 
@@ -251,9 +283,12 @@ while [ "$op" != 4 ]; do
 
     *)
         clear
-        echo "No es una opcion lo que intentas"
-        sleep 1s
+        echo
+        echo -e "\e[1;35m\033[4mNo es una opcion lo que intentas\e[0m\033[0m"
+        echo
+        sleep 2s
         clear
+        [ "$op" = true ]
     ;;
     esac #Final case
 done #Final while
