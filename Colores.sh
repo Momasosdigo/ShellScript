@@ -1,4 +1,6 @@
 #!/bin/bash
+
+clear
 echo
 echo "Regular Colors"
 echo -e "\033[0;30m Black  \033[0m"  # Black
