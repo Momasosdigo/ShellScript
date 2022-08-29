@@ -4,8 +4,7 @@ clear
 op=0
 op2=0
 name=0
-COL='\e[1;34m' #Color ${COL}
-NC='\033[0m' # No Color ${NC}
+
 ############ Estilos:
 #######
 # En Colores.sh se encuentran todo los colores usados
@@ -30,12 +29,12 @@ while [ "$op" != 4 ]; do
     echo -e "\t\t\t\t۞۞۞۞۞۞۞۞۞۞۞۞۞۞"
     echo
     echo -e "\e[0;36m*-------------------------------*\e[0m"
-    echo -e "\e[0;36m|\e[0m          \e[1;31m\033[5m\033[3mBienvenido\033[0m           \e[0;36m|\e[0m"
+    echo -e "\e[0;36m|\e[0m          \033[1;91m\033[5m\033[3mBienvenido\033[0m           \e[0;36m|\e[0m"
     echo -e "\e[0;36m|\e[0m                               \e[0;36m|\e[0m"
     echo -e "\e[0;36m|\e[0m 1. Ver usuarios en el sistema \e[0;36m|\e[0m"
     echo -e "\e[0;36m|\e[0m 2. Administrador de tareas    \e[0;36m|\e[0m"
     echo -e "\e[0;36m|\e[0m 3. Iniciar y detener procesos \e[0;36m|\e[0m"
-    echo -e "\e[0;36m|\e[0m 4. Salir                      \e[0;36m|\e[0m"
+    echo -e "\e[0;36m|\e[0m \033[0;101m4. Salir\033[0m                      \e[0;36m|\e[0m"
     echo -e "\e[0;36m*-------------------------------*\e[0m"
     read -r -p "=> " op 
     echo
@@ -46,7 +45,7 @@ while [ "$op" != 4 ]; do
         echo -e "\e[0;33m\033[1m*---------------------------------------*\e[0m"
         echo -e "\e[0;33m\033[1m|\e[0m 1. Mostrar usuarios actuales          \e[0;33m\033[1m|\e[0m"
         echo -e "\e[0;33m\033[1m|\e[0m 2. Mostrar usuarios antes conectados  \e[0;33m\033[1m|\e[0m"
-        echo -e "\e[0;33m\033[1m|\e[0m 3. Salir                              \e[0;33m\033[1m|\e[0m"
+        echo -e "\e[0;33m\033[1m|\e[0m \033[0;101m3. Salir\033[0m                              \e[0;33m\033[1m|\e[0m"
         echo -e "\e[0;33m\033[1m*---------------------------------------*\e[0m"
         read -r -p "=> " op
         echo
@@ -61,13 +60,13 @@ while [ "$op" != 4 ]; do
             2) sleep 1s
                 last
                 sleep 1s
-                read -r -p "Presione ${COL}enter${NC} para [ CONTINUAR ]..." op
+                read -r -p "Presione enter para [ CONTINUAR ]..." op
                 [ "$op" = true ]
                 echo
             ;;
 
             3)
-                read -r -p"Presione ${COL}enter${NC} para [ CONTINUAR ]..." op
+                read -r -p"Presione enter para [ CONTINUAR ]..." op
                 [ "$op" = true ]
                 clear
             ;;
@@ -95,7 +94,7 @@ while [ "$op" != 4 ]; do
         echo -e "\e[0;33m\033[1m|\e[0m\033[0m  3. Mostrar procesos generales  \033[5m\e[1;31m[ VISTA AVANZADA ]\e[0m  \e[0;33m\033[1m|\e[0m\033[0m"
         echo -e "\e[0;33m\033[1m|\e[0m\033[0m  4. Mostrar procesos por usario \033[5m\e[1;31m[ VISTA AVANZADA ]\e[0m  \e[0;33m\033[1m|\e[0m\033[0m"
         echo -e "\e[0;33m\033[1m|\e[0m\033[0m  5. Filtrar por procesos                            \e[0;33m\033[1m|\e[0m\033[0m"
-        echo -e "\e[0;33m\033[1m|\e[0m\033[0m  6. Salir                                           \e[0;33m\033[1m|\e[0m\033[0m"
+        echo -e "\e[0;33m\033[1m|\e[0m\033[0m  \033[0;101m6. Salir\033[0m                                           \e[0;33m\033[1m|\e[0m\033[0m"
         echo -e "\e[0;33m\033[1m*-----------------------------------------------------*\e[0m\033[0m"
         read -r -p "=> " op
         echo
@@ -144,7 +143,7 @@ while [ "$op" != 4 ]; do
                     echo -e "|                                             |"
                     echo -e "| 4. Mostrar uso de CPU   \033[5m\e[1;31m[ VISTA AVANZADA ]\e[0m  |"
                     echo -e "| 5. Mostrar uso de RAM   \033[5m\e[1;31m[ VISTA AVANZADA ]\e[0m  |"
-                    echo -e "| 6. Salir                                    |"
+                    echo -e "| \033[0;101m6. Salir\033[0m                                    |"
                     echo -e "*---------------------------------------------*"
                     read -r -p "=> " op2 
                     echo
@@ -173,7 +172,7 @@ while [ "$op" != 4 ]; do
                         ;;
 
                         6)
-                            read -r -p "Presione ${COL}enter${NC} para [ CONTINUAR ]..." op
+                            read -r -p "Presione enter para [ CONTINUAR ]..." op
                             [ "$op" = true ]
                             clear
                         ;;
@@ -191,7 +190,7 @@ while [ "$op" != 4 ]; do
             ;;
 
             6) #Vuelve al inicio, puesto que al no haber una validación el while se vuelve nulo
-                read -r -p "Presione ${COL}enter${NC} para [ CONTINUAR ]..." op
+                read -r -p "Presione enter para [ CONTINUAR ]..." op
                 [ "$op" = true ]
                 clear
             ;;
@@ -213,7 +212,7 @@ while [ "$op" != 4 ]; do
         echo -e "\e[1;33m\033[1m*--------------------------------------*\e[0m"
         echo -e "\e[1;33m\033[1m|\e[0m 1. Cerrar procesos \e[1;32m[ NECESARIO PID ]\e[0m \e[1;33m\033[1m|\e[0m"
         echo -e "\e[1;33m\033[1m|\e[0m 2. Iniciar aplicaciones              \e[1;33m\033[1m|\e[0m"
-        echo -e "\e[1;33m\033[1m|\e[0m 3. Salir                             \e[1;33m\033[1m|\e[0m"
+        echo -e "\e[1;33m\033[1m|\e[0m \033[0;101m3. Salir\033[0m                             \e[1;33m\033[1m|\e[0m"
         echo -e "\e[1;33m\033[1m*--------------------------------------*\e[0m"
         read -r -p "=> " op2
         echo
@@ -243,7 +242,7 @@ while [ "$op" != 4 ]; do
             ;;
 
             3)
-                read -r -p "Presione ${COL}enter${NC} para [ CONTINUAR ]..." op
+                read -r -p "Presione enter para [ CONTINUAR ]..." op
                 [ "$op" = true ]
                 clear
             ;;
@@ -261,7 +260,7 @@ while [ "$op" != 4 ]; do
     ;;
 
     4) #De menu principal
-        read -r -p "Presione cualquier tecla para [ SALIR ]..."
+        read -r -p "Presione enter  para [ SALIR ]..."
         clear
         exit
     ;;
