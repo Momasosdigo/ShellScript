@@ -34,7 +34,7 @@ while [ "$op" != 4 ]; do
     echo -e "\e[0;36m|\e[0m 1. Ver usuarios en el sistema \e[0;36m|\e[0m"
     echo -e "\e[0;36m|\e[0m 2. Administrador de tareas    \e[0;36m|\e[0m"
     echo -e "\e[0;36m|\e[0m 3. Iniciar y detener procesos \e[0;36m|\e[0m"
-    echo -e "\e[0;36m|\e[0m \033[0;101m4. Salir\033[0m                      \e[0;36m|\e[0m"
+    echo -e "\e[0;36m|\e[0m 4. \033[0;101m\033[1;97mSalir\033[0m                      \e[0;36m|\e[0m"
     echo -e "\e[0;36m*-------------------------------*\e[0m"
     read -r -p "=> " op 
     echo
@@ -45,7 +45,7 @@ while [ "$op" != 4 ]; do
         echo -e "\e[0;33m\033[1m*---------------------------------------*\e[0m"
         echo -e "\e[0;33m\033[1m|\e[0m 1. Mostrar usuarios actuales          \e[0;33m\033[1m|\e[0m"
         echo -e "\e[0;33m\033[1m|\e[0m 2. Mostrar usuarios antes conectados  \e[0;33m\033[1m|\e[0m"
-        echo -e "\e[0;33m\033[1m|\e[0m \033[0;101m3. Salir\033[0m                              \e[0;33m\033[1m|\e[0m"
+        echo -e "\e[0;33m\033[1m|\e[0m 3. \033[0;101m\033[1;97mVolver\033[0m                             \e[0;33m\033[1m|\e[0m"
         echo -e "\e[0;33m\033[1m*---------------------------------------*\e[0m"
         read -r -p "=> " op
         echo
@@ -94,7 +94,7 @@ while [ "$op" != 4 ]; do
         echo -e "\e[0;33m\033[1m|\e[0m\033[0m  3. Mostrar procesos generales  \033[5m\e[1;31m[ VISTA AVANZADA ]\e[0m  \e[0;33m\033[1m|\e[0m\033[0m"
         echo -e "\e[0;33m\033[1m|\e[0m\033[0m  4. Mostrar procesos por usario \033[5m\e[1;31m[ VISTA AVANZADA ]\e[0m  \e[0;33m\033[1m|\e[0m\033[0m"
         echo -e "\e[0;33m\033[1m|\e[0m\033[0m  5. Filtrar por procesos                            \e[0;33m\033[1m|\e[0m\033[0m"
-        echo -e "\e[0;33m\033[1m|\e[0m\033[0m  \033[0;101m6. Salir\033[0m                                           \e[0;33m\033[1m|\e[0m\033[0m"
+        echo -e "\e[0;33m\033[1m|\e[0m\033[0m  6. \033[0;101m\033[1;97mVolver\033[0m                                          \e[0;33m\033[1m|\e[0m\033[0m"
         echo -e "\e[0;33m\033[1m*-----------------------------------------------------*\e[0m\033[0m"
         read -r -p "=> " op
         echo
@@ -143,7 +143,7 @@ while [ "$op" != 4 ]; do
                     echo -e "|                                             |"
                     echo -e "| 4. Mostrar uso de CPU   \033[5m\e[1;31m[ VISTA AVANZADA ]\e[0m  |"
                     echo -e "| 5. Mostrar uso de RAM   \033[5m\e[1;31m[ VISTA AVANZADA ]\e[0m  |"
-                    echo -e "| \033[0;101m6. Salir\033[0m                                    |"
+                    echo -e "| 6. \033[0;101m\033[1;97mVolver\033[0m                                   |"
                     echo -e "*---------------------------------------------*"
                     read -r -p "=> " op2 
                     echo
@@ -212,7 +212,7 @@ while [ "$op" != 4 ]; do
         echo -e "\e[1;33m\033[1m*--------------------------------------*\e[0m"
         echo -e "\e[1;33m\033[1m|\e[0m 1. Cerrar procesos \e[1;32m[ NECESARIO PID ]\e[0m \e[1;33m\033[1m|\e[0m"
         echo -e "\e[1;33m\033[1m|\e[0m 2. Iniciar aplicaciones              \e[1;33m\033[1m|\e[0m"
-        echo -e "\e[1;33m\033[1m|\e[0m \033[0;101m3. Salir\033[0m                             \e[1;33m\033[1m|\e[0m"
+        echo -e "\e[1;33m\033[1m|\e[0m 3. \033[0;101mVolver\033[0m                            \e[1;33m\033[1m|\e[0m"
         echo -e "\e[1;33m\033[1m*--------------------------------------*\e[0m"
         read -r -p "=> " op2
         echo
@@ -236,6 +236,7 @@ while [ "$op" != 4 ]; do
             
             2)
                 echo "Puedes abrir el administrador de tareas anterior y comprobar el PID"
+                echo "en caso que desees cerrar el programa"
                 read -r -p "Nombre => " ap
                 "$ap"
                 echo 
