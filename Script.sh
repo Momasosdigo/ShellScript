@@ -11,7 +11,6 @@ name=0
 ######
 ############ To Do List:
 # ! Reparar la validacion de htop
-# ! Plantear el filtro manuar de tareas PID
 # !! Preparar documentacion y pruebas en caliente !!
 # ? Aplicar colores (Menus distintos) ===> *En proceso*
 # ? Aberiguar rigidez del codigo ante de 28/08
