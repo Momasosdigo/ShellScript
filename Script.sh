@@ -7,7 +7,7 @@ name=0
 
 ############ Estilos:
 #######
-# En Colores.sh se encuentran todo los colores usados
+# En Colores.sh se encuentran todo los colores y efectos usados
 ######
 ############ To Do List:
 # ! Reparar la validacion de htop
