@@ -10,6 +10,7 @@ name=0
 # En Colores.sh se encuentran todo los colores y efectos usados
 ######
 ############ To Do List:
+# ! Revisar el top
 # ! Reparar la validacion de htop
 # !! Preparar documentacion y pruebas en caliente !!
 # ? Aplicar colores (Menus distintos) ===> *En proceso*
@@ -91,7 +92,7 @@ while [ "$op" != 4 ]; do
         echo -e "\e[0;33m\033[1m|\e[0m\033[0m        \e[0;32m\033[1m\033[4m\033[3m[ Vista avanzada del administrador ]\033[0m         \e[0;33m\033[1m|\e[0m\033[0m"
         echo -e "\e[0;33m\033[1m|\e[0m\033[0m                                                     \e[0;33m\033[1m|\e[0m\033[0m"
         echo -e "\e[0;33m\033[1m|\e[0m\033[0m  3. Mostrar procesos generales  \033[5m\e[1;31m[ VISTA AVANZADA ]\e[0m  \e[0;33m\033[1m|\e[0m\033[0m"
-        echo -e "\e[0;33m\033[1m|\e[0m\033[0m  4. Mostrar procesos por usuario \033[5m\e[1;31m[ VISTA AVANZADA ]\e[0m  \e[0;33m\033[1m|\e[0m\033[0m"
+        echo -e "\e[0;33m\033[1m|\e[0m\033[0m  4. Mostrar procesos por usuario \033[5m\e[1;31m[ VISTA AVANZADA ]\e[0m \e[0;33m\033[1m|\e[0m\033[0m"
         echo -e "\e[0;33m\033[1m|\e[0m\033[0m  5. Filtrar por procesos                            \e[0;33m\033[1m|\e[0m\033[0m"
         echo -e "\e[0;33m\033[1m|\e[0m\033[0m  6. \033[0;101m\033[1;97mVolver\033[0m                                          \e[0;33m\033[1m|\e[0m\033[0m"
         echo -e "\e[0;33m\033[1m*-----------------------------------------------------*\e[0m\033[0m"
@@ -124,7 +125,7 @@ while [ "$op" != 4 ]; do
                 echo -e "\e[1;36m Ingrese el nombre del \033[4musuario\033[0m \e[1;36mque desea ver sus procesos \e[0m"
                 read -r -p "=> " name
                 htop -u "$name"
-                echo
+                #htop || echo El programa se encuentra instalado || echo El programa no esta instalado 
             ;;
 
             5)

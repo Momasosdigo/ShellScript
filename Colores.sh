@@ -2,7 +2,7 @@
 
 clear
 echo
-echo "Efect"
+echo "Efectos"
 echo -e "\033[1m Estilo normal \033[0m"
 echo -e "\033[1m Negrita \033[0m"
 echo -e "\033[2m Dim \033[0m"
