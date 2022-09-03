@@ -10,7 +10,6 @@ name=0
 # En Colores.sh se encuentran todo los colores y efectos usados
 ######
 ############ To Do List:
-# ! Modularizar 
 # ! Revisar el top
 # ! Reparar la validacion de htop
 # !! Preparar documentacion y pruebas en caliente !!
@@ -278,3 +277,14 @@ while [ "$op" != 4 ]; do
     ;;
     esac #Final case
 done #Final while
+
+#   cat /etc/passwd | while read linea do
+#   iduser= $(echo $linea | cut -d ":" -f3)
+#   nom= $(echo $linea | cut -d ":" -f1)
+#   if [$id - ge '1000'];
+#   then
+#   echo $id
+#   fi
+#  done
+#   
+# awk
