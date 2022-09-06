@@ -5,19 +5,9 @@ op=0
 op2=0
 name=0
 
-############ Estilos:
-#######
-# En Colores.sh se encuentran todo los colores y efectos usados
-######
-############ To Do List:
-# ! Revisar el top
-# ! Reparar la validacion de htop
-# !! Preparar documentacion y pruebas en caliente !!
-# ? Aplicar colores (Menus distintos) ===> *En proceso*
-# ? Aberiguar rigidez del codigo ante de 28/08
-# todo: Reiteracion de menu con validacion [Terminado] => Pisible mejora a revisar
-# todo: Comprobar ShellCheker para la rigidez a temprana edad de codigo
-#############
+##############################
+# Sona de pruebas de codigo #
+############################
 
 while [ "$op" != 4 ]; do
     clear
