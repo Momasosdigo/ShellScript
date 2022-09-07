@@ -4,27 +4,23 @@ clear
 op=0
 op2=0
 name=0
+sql=0
 
-##############################
-# Sona de pruebas de codigo #
-############################
+############################################
+# ?Zona de pruebas de codigo               #
+# !---> Trabajando en conexion a SQL <--- #
+##########################################
 
-while [ "$op" != 4 ]; do
+while [ "$op" != 5 ]; do
     clear
-    echo -e "\t\t\t\t۞۞۞۞۞۞۞۞۞۞۞۞۞۞"
-    echo -e "\t\t\t\t  \033[1m\033[4mPROYECTO HECHO POR:\e[0m  "
-    echo -e "\t\t\t\t \e[0;31m   Carlos Gonzalez\e[0m      "
-    echo -e "\t\t\t\t \e[0;32m  Micaela Rodriguez\e[0m    "
-    echo -e "\t\t\t\t \e[0;34m    Luis Vergara\e[0m         "
-    echo -e "\t\t\t\t۞۞۞۞۞۞۞۞۞۞۞۞۞۞"
-    echo
     echo -e "\e[0;36m*-------------------------------*\e[0m"
     echo -e "\e[0;36m|\e[0m          \033[1;91m\033[5m\033[3mBienvenido\033[0m           \e[0;36m|\e[0m"
     echo -e "\e[0;36m|\e[0m                               \e[0;36m|\e[0m"
     echo -e "\e[0;36m|\e[0m 1. Ver usuarios en el sistema \e[0;36m|\e[0m"
     echo -e "\e[0;36m|\e[0m 2. Administrador de tareas    \e[0;36m|\e[0m"
     echo -e "\e[0;36m|\e[0m 3. Iniciar y detener procesos \e[0;36m|\e[0m"
-    echo -e "\e[0;36m|\e[0m 4. \033[0;101m\033[1;97mSalir\033[0m                      \e[0;36m|\e[0m"
+    echo -e "\e[0;36m|\e[0m 4. Iniciar base de datos \e[0;36m|\e[0m"
+    echo -e "\e[0;36m|\e[0m 5. \033[0;101m\033[1;97mSalir\033[0m                      \e[0;36m|\e[0m"
     echo -e "\e[0;36m*-------------------------------*\e[0m"
     read -r -p "=> " op 
     echo
@@ -249,8 +245,62 @@ while [ "$op" != 4 ]; do
             ;;
         esac #Final del case 3
     ;;
+    ####################################
+    #Lanzador de Mysql, en pruebas aun#
+    4) clear
 
-    4) #De menu principal
+       while [ "$sql" != 5 ]; do
+            echo -e "\e[0;36m*-------------------------------*\e[0m"
+            echo -e "\e[0;36m|\e[0m          \033[1;91m\033[5m\033[3mMySQL Terminal\033[0m           \e[0;36m|\e[0m"
+            echo -e "\e[0;36m|\e[0m                               \e[0;36m|\e[0m"
+            echo -e "\e[0;36m|\e[0m 1. Comprobar el servicio SQL \e[0;36m|\e[0m"
+            echo -e "\e[0;36m|\e[0m 2. Activar el servicio SQL \e[0;36m|\e[0m"
+            echo -e "\e[0;36m|\e[0m 3. Detener el servicio SQL    \e[0;36m|\e[0m"
+            echo -e "\e[0;36m|\e[0m 4. Iniciar MySQL \e[0;36m|\e[0m"
+            echo -e "\e[0;36m|\e[0m 5. \033[0;101m\033[1;97mVolver\033[0m                      \e[0;36m|\e[0m"
+            echo -e "\e[0;36m*-------------------------------*\e[0m"
+            read -r -p "=> " sql 
+            echo
+
+           case "$sql" in
+            1)
+                service status mysql
+            ;;
+
+            2)
+                service start mysql
+            ;;
+            
+            3)
+                service stop mysql
+            ;;
+
+            4) clear
+                mysql
+            ;;
+            
+            5)
+                read -r -p "Presione enter para [ CONTINUAR ]..." op
+                [ "$op" = true ]
+                clear
+            ;;
+            
+            *)
+                clear
+                echo
+                echo -e "\e[1;35m\033[4mNo es una opcion lo que intentas\e[0m\033[0m"
+                echo
+                sleep 2s
+                clear
+                [ "$sql" = true ]
+            ;;
+           esac #Final switch sql
+       done #Final while para sql
+    ;;
+    #Lanzador de Mysql, en pruebas aun#
+    ##################################
+
+    5) #De menu principal
         read -r -p "Presione enter  para [ SALIR ]..."
         clear
         exit
