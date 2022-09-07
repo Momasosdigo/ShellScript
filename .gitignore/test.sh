@@ -9,7 +9,8 @@ sql=0
 ############################################
 # ?Zona de pruebas de codigo               #
 # !---> Trabajando en conexion a SQL <--- #
-##########################################
+# Liena de trabajo acual 251 a 301       #
+#########################################
 
 while [ "$op" != 5 ]; do
     clear
@@ -248,7 +249,6 @@ while [ "$op" != 5 ]; do
     ####################################
     #Lanzador de Mysql, en pruebas aun#
     4) clear
-
        while [ "$sql" != 5 ]; do
             echo -e "\e[0;36m*-------------------------------*\e[0m"
             echo -e "\e[0;36m|\e[0m          \033[1;91m\033[5m\033[3mMySQL Terminal\033[0m           \e[0;36m|\e[0m"
