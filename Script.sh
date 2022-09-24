@@ -71,7 +71,7 @@ while [ "$op" != 4 ]; do
                 [ "$op" = true ]
                 clear
             ;;
-            
+
             *)
                 clear
                 echo
@@ -99,7 +99,7 @@ while [ "$op" != 4 ]; do
         echo -e "\e[0;33m\033[1m*-----------------------------------------------------*\e[0m\033[0m"
         read -r -p "=> " op
         echo
-        
+
         case $op in 
             1) sleep 1s
                 echo
@@ -154,11 +154,11 @@ while [ "$op" != 4 ]; do
                         1)
                             top -o %CPU
                         ;;
-                        
+
                         2)
                             top -o %MEM
                         ;;
-                        
+
                         3)
                             df -h
                         ;;
@@ -195,7 +195,7 @@ while [ "$op" != 4 ]; do
                 [ "$op" = true ]
                 clear
             ;;
-            
+
             *)
                 clear
                 echo
@@ -217,7 +217,7 @@ while [ "$op" != 4 ]; do
         echo -e "\e[1;33m\033[1m*--------------------------------------*\e[0m"
         read -r -p "=> " op2
         echo
-        
+
         case $op2 in 
             1) sleep 1s
                 echo "Para cerrar procesos sera necesario el numero PID el cual"
@@ -234,7 +234,7 @@ while [ "$op" != 4 ]; do
                 fi
                 echo
             ;;
-            
+
             2)
                 echo "Puedes abrir el administrador de tareas anterior y comprobar el PID"
                 echo "en caso que desees cerrar el programa"
