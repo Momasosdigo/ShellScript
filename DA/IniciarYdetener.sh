@@ -22,7 +22,7 @@ function iYd() {
                 elif [ "$pid" -le 1116 ]; then
                     echo -e "\e[1;35m\033[4mLa integridad del sistema se veria afectada\e[0m\033[0m"
                 else
-                    kill "$pid"
+                    killall -u "$pid"
                 fi
                 echo
             ;;
