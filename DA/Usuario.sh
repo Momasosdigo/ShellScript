@@ -13,14 +13,14 @@ function user() {
         case $op_user in 
             1) sleep 1s
                 w
-                read -r -p "Presione enter para [ CONTINUAR ]..." op_user
+                read -n1 -p "Presione cualquier tecla para [ CONTINUAR ]..." op_user
                 [ "$op_user" = true ]
                 clear
             ;;
 
             2) sleep 1s
                 last
-                read -r -p "Presione enter para [ CONTINUAR ]..." op_user
+                read -n1 -p "Presione cualquier tecla para [ CONTINUAR ]..." op_user
                 [ "$op_user" = true ]
                 echo
                 clear
@@ -40,6 +40,7 @@ function user() {
                 sleep 2s
                 clear
                 [ "$op_user" = true ]
+
             ;;
         esac #Final del case 4
     done #Final del while 4

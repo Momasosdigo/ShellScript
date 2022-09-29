@@ -37,7 +37,10 @@ while [ "$op_central" != 4 ]; do
     case $op_central in
     1) #De menu principal
         sleep 1s
-        DA/./Usuario.sh
+        DA/./Usuario.sh 
+        #Indicando la carpeta en dodne se encuentra los demas script, ya es suficiente
+        #Si bien la fomra de hacerlo es invocando el source, en este caso y por efectos practicos
+        #no lo use, por que todo se encuentra en un mismo documneto
     ;;
 
     2) #De menu principal
@@ -51,7 +54,9 @@ while [ "$op_central" != 4 ]; do
     ;;
 
     4) #De menu principal
-        read -r -p "Presione enter  para [ SALIR ]..."
+        read -n1 -p "Presione cualquier tecla para [ SALIR ]..."
+        echo -e "\033[4;30m\033[1;35mVuelva pronto\033[0m \033[1;35m^^\033[0m"
+        sleep 1.5s
         clear
         exit
     ;;
@@ -65,5 +70,6 @@ while [ "$op_central" != 4 ]; do
         clear
         [ "$op_central" = true ]
     ;;
+
     esac #Final case principal
 done #Final while principal

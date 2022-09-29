@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function tar() {
+function tarea() {
     while [ "$op_tar" != 6 ]; do
         echo -e "\e[0;33m\033[1m*-----------------------------------------------------*\e[0m\033[0m"
         echo -e "\e[0;33m\033[1m|\e[0m  1. Mostrar procesos generales   \e[1;34m[ VISTA SIMPLE ]\e[0m   \e[0;33m\033[1m|\e[0m\033[0m"
@@ -21,7 +21,7 @@ function tar() {
                 echo
                 top
                 echo
-                read -r -p "Presione enter para [ CONTINUAR ]..." op_tar
+                read -n1 -p "Presione cualquier tecla para [ CONTINUAR ]..." op_tar
                 [ "$op_tar" = true ]
                 clear
             ;;
@@ -30,7 +30,7 @@ function tar() {
                 echo -e "\e[1;36m Ingrese el nombre del \033[4musuario\033[0m \e[1;36mque desea ver sus procesos \e[0m"
                 read -r -p "=> " name
                 top -u "$name"
-                read -r -p "Presione enter para [ CONTINUAR ]..." op_tar
+                read -n1 -p "Presione cualquier tecla para [ CONTINUAR ]..." op_tar
                 [ "$op_tar" = true ]
                 clear
             ;;
@@ -72,21 +72,21 @@ function tar() {
                         #Vista simple
                         1)
                             top -o %CPU
-                            read -r -p "Presione enter para [ CONTINUAR ]..." op_tar2
+                            read -n1 -p "Presione cualquier tecla para [ CONTINUAR ]..." op_tar2
                             [ "$op_tar2" = true ]
                             clear
                         ;;
 
                         2)
                             top -o %MEM
-                            read -r -p "Presione enter para [ CONTINUAR ]..." op_tar2
+                            read -n1 -p "Presione cualquier tecla para [ CONTINUAR ]..." op_tar2
                             [ "$op_tar2" = true ]
                             clear
                         ;;
 
                         3)
                             sudo df -h
-                            read -r -p "Presione enter para [ CONTINUAR ]..." op_tar2
+                            read -n1 -p "Presione cualquier tecla para [ CONTINUAR ]..." op_tar2
                             [ "$op_tar2" = true ]
                             clear
                         ;;
@@ -101,11 +101,11 @@ function tar() {
                         ;;
 
                         6)
-                            read -r -p "Presione enter para [ CONTINUAR ]..."
+                            read -r -p "Presione enter para [ VOLVER ]..." op_tar
                             [ "$op_tar" = true ]
                             clear
                         ;;
-
+                            
                         *)
                             clear
                             echo
@@ -137,4 +137,4 @@ function tar() {
     done #Final del while 2
 }
 
-tar
+tarea
