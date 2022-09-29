@@ -41,8 +41,8 @@ function user() {
                 clear
                 [ "$op_user" = true ]
             ;;
-        esac
-    done
+        esac #Final del case 4
+    done #Final del while 4
 }
 
 user

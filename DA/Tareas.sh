@@ -39,8 +39,6 @@ function tar() {
                 echo
                 htop -t
                 clear
-                #read -r -p "Presione enter para [ CONTINUAR ]..." op
-                #[ "$op" = true ]
             ;;
 
             4) sleep 1s
@@ -48,7 +46,6 @@ function tar() {
                 read -r -p "=> " name
                 htop -u "$name"
                 clear
-                #htop || echo El programa se encuentra instalado || echo El programa no esta instalado 
             ;;
 
             5)
@@ -137,7 +134,7 @@ function tar() {
                 [ "$op_tar" = true ]
             ;;
         esac #Final del case 2
-    done
+    done #Final del while 2
 }
 
 tar

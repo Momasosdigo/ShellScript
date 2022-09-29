@@ -65,5 +65,5 @@ while [ "$op_central" != 4 ]; do
         clear
         [ "$op_central" = true ]
     ;;
-    esac #Final case
-done #Final while
+    esac #Final case principal
+done #Final while principal

@@ -51,7 +51,7 @@ function iYd() {
                 [ "$iYd" = true ]
             ;;
         esac #Final del case 3
-   done
+   done #Final del while 3
 }
 
 iYd
