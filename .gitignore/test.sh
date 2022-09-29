@@ -249,37 +249,42 @@ while [ "$op" != 5 ]; do
     ####################################
     #Lanzador de Mysql, en pruebas aun#
     4) clear
-       while [ "$sql" != 5 ]; do
+       while [ "$sql" != 6 ]; do
             echo -e "\e[0;36m*-------------------------------*\e[0m"
             echo -e "\e[0;36m|\e[0m          \033[1;91m\033[5m\033[3mMySQL Terminal\033[0m           \e[0;36m|\e[0m"
             echo -e "\e[0;36m|\e[0m                               \e[0;36m|\e[0m"
             echo -e "\e[0;36m|\e[0m 1. Comprobar el servicio SQL \e[0;36m|\e[0m"
-            echo -e "\e[0;36m|\e[0m 2. Activar el servicio SQL \e[0;36m|\e[0m"
-            echo -e "\e[0;36m|\e[0m 3. Detener el servicio SQL    \e[0;36m|\e[0m"
-            echo -e "\e[0;36m|\e[0m 4. Iniciar MySQL \e[0;36m|\e[0m"
-            echo -e "\e[0;36m|\e[0m 5. \033[0;101m\033[1;97mVolver\033[0m                      \e[0;36m|\e[0m"
+            echo -e "\e[0;36m|\e[0m 2. Iniciar MySQL \e[0;36m|\e[0m"
+            echo -e "\e[0;36m|\e[0m 3. Activar el servicio SQL \e[0;36m|\e[0m"
+            echo -e "\e[0;36m|\e[0m 4. Detener el servicio SQL    \e[0;36m|\e[0m"
+            echo -e "\e[0;36m|\e[0m 5. Reiniciar MySQL \e[0;36m|\e[0m"
+            echo -e "\e[0;36m|\e[0m 6. \033[0;101m\033[1;97mVolver\033[0m                      \e[0;36m|\e[0m"
             echo -e "\e[0;36m*-------------------------------*\e[0m"
             read -r -p "=> " sql 
             echo
 
            case "$sql" in
             1)
-                service status mysql
+                service mysql status
             ;;
 
-            2)
-                service start mysql
-            ;;
-            
-            3)
-                service stop mysql
-            ;;
-
-            4) clear
+            2) clear
                 mysql
             ;;
             
+            3)
+                service mysql start
+            ;;
+
+            4) 
+                service mysql stop
+            ;;
+
             5)
+                service mysql restart
+            ;;
+            
+            6)
                 read -r -p "Presione enter para [ CONTINUAR ]..." op
                 [ "$op" = true ]
                 clear
