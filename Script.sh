@@ -23,7 +23,6 @@ while [ "$op_central" != 4 ]; do
     echo -e "\t\t\t\t \e[0;34m    Luis Vergara\e[0m"
     echo -e "\t\t\t\t۞۞۞۞۞۞۞۞۞۞۞۞۞۞"
     echo
-
     echo -e "\e[0;36m*-------------------------------*\e[0m"
     echo -e "\e[0;36m|\e[0m          \033[1;91m\033[5m\033[3mBienvenido\033[0m           \e[0;36m|\e[0m"
     echo -e "\e[0;36m|\e[0m                               \e[0;36m|\e[0m"
