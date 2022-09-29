@@ -23,10 +23,10 @@ name=0
 while [ "$op" != 4 ]; do
     clear
     echo -e "\t\t\t\t۞۞۞۞۞۞۞۞۞۞۞۞۞۞"
-    echo -e "\t\t\t\t  \033[1m\033[4mPROYECTO HECHO POR:\e[0m  "
-    echo -e "\t\t\t\t \e[0;31m   Carlos Gonzalez\e[0m      "
-    echo -e "\t\t\t\t \e[0;32m  Micaela Rodriguez\e[0m    "
-    echo -e "\t\t\t\t \e[0;34m    Luis Vergara\e[0m         "
+    echo -e "\t\t\t\t  \033[1m\033[4mPROYECTO HECHO POR:\e[0m"
+    echo -e "\t\t\t\t \e[0;31m   Carlos Gonzalez\e[0m"
+    echo -e "\t\t\t\t \e[0;32m  Micaela Rodriguez\e[0m"
+    echo -e "\t\t\t\t \e[0;34m    Luis Vergara\e[0m"
     echo -e "\t\t\t\t۞۞۞۞۞۞۞۞۞۞۞۞۞۞"
     echo
     echo -e "\e[0;36m*-------------------------------*\e[0m"
@@ -53,9 +53,10 @@ while [ "$op" != 4 ]; do
         
         case $op in 
             1) sleep 1s
-                echo
                 w
                 echo
+                read -r -p "Presione enter para [ CONTINUAR ]..." op
+                [ "$op" = true ]
             ;;
  
             2) sleep 1s
