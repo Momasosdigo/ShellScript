@@ -10,18 +10,17 @@ op_central=0
 ############ To Do List:
 # !! Preparar documentacion y pruebas en caliente !!
 # ? Aberiguar rigidez del codigo ante de 28/08
-# todo: Reiteracion de menu con validacion [Terminado] => Pisible mejora a revisar
 # todo: Comprobar ShellCheker para la rigidez a temprana edad de codigo
 #############
 
-while [ "$op_central" != 4 ]; do
+while [ "$op_central" != 5 ]; do
     clear
-    echo -e "\t\t\t\t۞۞۞۞۞۞۞۞۞۞۞۞۞۞"
-    echo -e "\t\t\t\t  \033[1m\033[4mPROYECTO HECHO POR:\e[0m"
-    echo -e "\t\t\t\t \e[0;31m   Carlos Gonzalez\e[0m"
-    echo -e "\t\t\t\t \e[0;32m  Micaela Rodriguez\e[0m"
-    echo -e "\t\t\t\t \e[0;34m    Luis Vergara\e[0m"
-    echo -e "\t\t\t\t۞۞۞۞۞۞۞۞۞۞۞۞۞۞"
+    echo -e "\t\t\t\t\t۞۞۞۞۞۞۞۞۞۞۞۞۞۞"
+    echo -e "\t\t\t\t\t  \033[1m\033[4mPROYECTO HECHO POR:\e[0m"
+    echo -e "\t\t\t\t\t \e[0;31m   Carlos Gonzalez\e[0m"
+    echo -e "\t\t\t\t\t \e[0;32m  Micaela Rodriguez\e[0m"
+    echo -e "\t\t\t\t\t \e[0;34m    Luis Vergara\e[0m"
+    echo -e "\t\t\t\t\t۞۞۞۞۞۞۞۞۞۞۞۞۞۞"
     echo
     echo -e "\e[0;36m*-------------------------------*\e[0m"
     echo -e "\e[0;36m|\e[0m          \033[1;91m\033[5m\033[3mBienvenido\033[0m           \e[0;36m|\e[0m"
@@ -29,7 +28,8 @@ while [ "$op_central" != 4 ]; do
     echo -e "\e[0;36m|\e[0m 1. Ver usuarios en el sistema \e[0;36m|\e[0m"
     echo -e "\e[0;36m|\e[0m 2. Administrador de tareas    \e[0;36m|\e[0m"
     echo -e "\e[0;36m|\e[0m 3. Iniciar y detener procesos \e[0;36m|\e[0m"
-    echo -e "\e[0;36m|\e[0m 4. \033[0;101m\033[1;97mSalir\033[0m                      \e[0;36m|\e[0m"
+    echo -e "\e[0;36m|\e[0m 4. Iniciar base de datos      \e[0;36m|\e[0m"
+    echo -e "\e[0;36m|\e[0m 5. \033[0;101m\033[1;97mSalir\033[0m                      \e[0;36m|\e[0m"
     echo -e "\e[0;36m*-------------------------------*\e[0m"
     read -r -p "=> " op_central 
     echo
@@ -54,6 +54,11 @@ while [ "$op_central" != 4 ]; do
     ;;
 
     4) #De menu principal
+        sleep 1s
+        DA/./SQL.sh
+    ;;
+
+    5) #De menu principal
         read -n1 -p "Presione cualquier tecla para [ SALIR ]..."
         echo -e "\033[4;30m\033[1;35mVuelva pronto\033[0m \033[1;35m^^\033[0m"
         sleep 1.5s
