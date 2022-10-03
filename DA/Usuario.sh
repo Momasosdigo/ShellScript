@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function user() {
+function user() { clear
     while [ "$op_user" != 3 ]; do
         echo -e "\e[0;33m\033[1m*---------------------------------------*\e[0m"
         echo -e "\e[0;33m\033[1m|\e[0m 1. Mostrar usuarios actuales          \e[0;33m\033[1m|\e[0m"

@@ -14,7 +14,6 @@ op_central=0
 #############
 
 while [ "$op_central" != 5 ]; do
-    clear
     echo -e "\t\t\t\t\t۞۞۞۞۞۞۞۞۞۞۞۞۞۞"
     echo -e "\t\t\t\t\t  \033[1m\033[4mPROYECTO HECHO POR:\e[0m"
     echo -e "\t\t\t\t\t \e[0;31m   Carlos Gonzalez\e[0m"

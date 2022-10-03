@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function iYd() {
+function iYd() { clear
     while [ "$iYd" != 3 ]; do
         echo -e "\e[1;33m\033[1m*--------------------------------------*\e[0m"
         echo -e "\e[1;33m\033[1m|\e[0m 1. Cerrar procesos \e[1;32m[ NECESARIO PID ]\e[0m \e[1;33m\033[1m|\e[0m"

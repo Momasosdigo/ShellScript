@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function tarea() {
+function tarea() { clear
     while [ "$op_tar" != 6 ]; do
         echo -e "\e[0;33m\033[1m*-----------------------------------------------------*\e[0m\033[0m"
         echo -e "\e[0;33m\033[1m|\e[0m  1. Mostrar procesos generales   \e[1;34m[ VISTA SIMPLE ]\e[0m   \e[0;33m\033[1m|\e[0m\033[0m"
