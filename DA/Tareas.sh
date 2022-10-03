@@ -134,7 +134,7 @@ function tarea() {
                 [ "$op_tar" = true ]
             ;;
         esac #Final del case 2
-    done #Final del while 2
+    done #Final del While 2
 }
 
 tarea
