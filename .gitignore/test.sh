@@ -9,7 +9,7 @@ sql=0
 ############################################
 # ?Zona de pruebas de codigo               #
 # !---> Trabajando en conexion a SQL <--- #
-# Liena de trabajo acual 251 a 301       #
+# Liena de trabajo acual 251 a 304       #
 #########################################
 
 while [ "$op" != 5 ]; do
