@@ -13,7 +13,7 @@ function sql() { clear
         echo -e "\e[0;36m|\e[0m 6. \033[0;101m\033[1;97mVolver\033[0m                     \e[0;36m|\e[0m"
         echo -e "\e[0;36m*-------------------------------*\e[0m"
         read -r -p "=> " sql 
-        echo
+        echo 
 
         case "$sql" in
             1)
