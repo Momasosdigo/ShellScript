@@ -49,12 +49,6 @@ function sql() { clear
                 clear
             ;;
 
-            6)
-                read -r -p "Presione enter para [ VOLVER ]..."
-                ./Script.sh
-                clear
-            ;;
-
             *)
                 clear
                 echo

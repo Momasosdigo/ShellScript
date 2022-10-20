@@ -26,12 +26,6 @@ function user() { clear
                 clear
             ;;
 
-            3)
-                read -r -p "Presione enter para [ VOLVER ]..." op_user
-                ./Script.sh
-                clear
-            ;;
-
             *)
                 clear
                 echo

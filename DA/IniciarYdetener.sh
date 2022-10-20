@@ -33,12 +33,6 @@ function iYd() { clear
                 echo 
             ;;
 
-            3)
-                read -r -p "Presione enter para [ VOLVER ]..." iYd
-                ./Script.sh
-                clear
-            ;;
-
             *)
                 clear
                 echo

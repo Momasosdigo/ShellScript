@@ -118,12 +118,6 @@ function tarea() { clear
                 done #Final while 5
             ;;
 
-            6) #Vuelve al inicio, puesto que al no haber una validación el while se vuelve nulo
-                read -r -p "Presione enter para [ VOLVER ]..."
-                ./Script.sh
-                clear
-            ;;
-
             *)
                 clear
                 echo
