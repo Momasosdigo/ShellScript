@@ -30,6 +30,8 @@ while [ "$op_central" != 5 ]; do
     echo -e "\e[0;36m|\e[0m 4. Iniciar base de datos      \e[0;36m|\e[0m"
     echo -e "\e[0;36m|\e[0m 5. \033[0;101m\033[1;97mSalir\033[0m                      \e[0;36m|\e[0m"
     echo -e "\e[0;36m*-------------------------------*\e[0m"
+    echo -e "\e[0;36m|\e[0m $(date)  \e[0;36m|\e[0m"
+    echo -e "\e[0;36m*-------------------------------*\e[0m"
     read -r -p "=> " op_central 
     echo
 
