@@ -27,7 +27,7 @@ function iYd() { clear
 
             2)
                 echo "Puedes abrir el administrador de tareas anterior y comprobar el PID"
-                echo "en caso que desees cerrar el programa"
+                echo "en caso que desees abrir un programa"
                 read -r -p "Nombre => " ap
                 "$ap"
                 echo 
