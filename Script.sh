@@ -38,7 +38,7 @@ while [ "$op_central" != 5 ]; do
     case $op_central in
     1) #De menu principal
         sleep 1s
-        DA/./Usuario.sh 
+        source DA/Usuario.sh
         #Indicando la carpeta en dodne se encuentra los demas script, ya es suficiente
         #Si bien la fomra de hacerlo es invocando el source, en este caso y por efectos practicos
         #no lo use, por que todo se encuentra en un mismo documneto
@@ -46,17 +46,17 @@ while [ "$op_central" != 5 ]; do
 
     2) #De menu principal
         sleep 1s
-        DA/./Tareas.sh
+        source DA/Tareas.sh
     ;;
 
     3) #De menu principal
         sleep 1s
-        DA/./IniciarYdetener.sh
+        source DA/IniciarYdetener.sh
     ;;
 
     4) #De menu principal
         sleep 1s
-        DA/./SQL.sh
+        source DA/SQL.sh
     ;;
 
     5) #De menu principal
