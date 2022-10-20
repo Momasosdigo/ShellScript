@@ -17,9 +17,7 @@ function iYd() { clear
                 echo "Puedes abrir el administrador de tareas anterior y comprobar el PID"
                 read -r -p "PID => " pid
 
-                if [ "$pid" -le 893 ]; then
-                    echo -e "\e[1;35m\033[4mLa integridad del sistema se veria afectada\e[0m\033[0m"
-                elif [ "$pid" -le 1116 ]; then
+                if [ "$pid" -le 1116 ]; then
                     echo -e "\e[1;35m\033[4mLa integridad del sistema se veria afectada\e[0m\033[0m"
                 else
                     killall -u "$pid"
