@@ -9,7 +9,7 @@ function iYd() { clear
         echo -e "\e[1;33m\033[1m*--------------------------------------*\e[0m"
         read -r -p "=> " iYd
         echo
-
+ 
         case $iYd in 
             1) sleep 1s
                 echo "Para cerrar procesos sera necesario el numero PID el cual"
