@@ -13,6 +13,7 @@ function user() { clear
         case $op_user in 
             1) sleep 1s
                 w
+                #Muestra los usuarios en el sistema
                 read -n1 -p "Presione cualquier tecla para [ CONTINUAR ]..." op_user
                 [ "$op_user" = true ]
                 clear
@@ -20,10 +21,21 @@ function user() { clear
 
             2) sleep 1s
                 last
+                #Muestra todo los usuarios que iniciaron sesión por ultima vez 
                 read -n1 -p "Presione cualquier tecla para [ CONTINUAR ]..." op_user
                 [ "$op_user" = true ]
                 echo
                 clear
+            ;;
+            
+            3)
+                ( exec "./Script.sh" )
+                #Con el comando [ exec ] reemplaza al Shell sin crear un nuevo proceso. 
+                #Sin embargo, podemos ponerlo en una SubShell, la cual usara 
+                #un porcentaje de procesador y ram, para usar esto es 
+                #quitando el comando [ exec ] y dejando solo los paréntesis y el path del script:
+                #[ ( "./Script.sh" ) ]
+                #(La segunda opción es buena idea usarla en caso que se dese ejecutar tareas pesadas)
             ;;
 
             *)

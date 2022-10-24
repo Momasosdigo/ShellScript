@@ -19,8 +19,12 @@ function iYd() { clear
 
                 if [ "$pid" -le 1116 ]; then
                     echo -e "\e[1;35m\033[4mLa integridad del sistema se veria afectada\e[0m\033[0m"
+                    #Algo a tener en cuenta es que todo los parámetros que están por debajo de 1116
+                    #Son procesos que afectan directamente a la Terminal y el sistema, siendo así
+                    #que los procesos 387, 792 y 1031 rompen el sistema
                 else
                     killall -u "$pid"
+                    #La idea de usar [ killall ] es matar todo el árbol de proceso de dicha app
                 fi
                 echo
             ;;
@@ -31,6 +35,10 @@ function iYd() { clear
                 read -r -p "Nombre => " ap
                 "$ap"
                 echo 
+            ;;
+
+            3)
+                ( exec "./Script.sh" )
             ;;
 
             *)

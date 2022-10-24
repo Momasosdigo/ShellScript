@@ -49,6 +49,10 @@ function sql() { clear
                 clear
             ;;
 
+            6)
+                ( exec "./Script.sh" )
+            ;;
+
             *)
                 clear
                 echo
