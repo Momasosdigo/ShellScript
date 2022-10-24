@@ -35,7 +35,7 @@ while [ "$op_central" != 5 ]; do
         source DA/Usuario
         #Indicando la carpeta en dodne se encuentra los demas script, ya es suficiente para
         #ejecutarlos, no es necesario el darles la extencion [ .sh ] puesto que nuestro main
-        #se encarga de darle todo parametros necesarios sin necesidad de hacerlo nosotros
+        #se encarga de darle todo parametros necesarios sin necesidad de hacerlo nosotros.
     ;;
 
     2) #De menu principal
@@ -56,7 +56,7 @@ while [ "$op_central" != 5 ]; do
     5) #De menu principal
         #Controlador de eventos CTRL+C
         function ctrl_c() {
-            tput cnorm #Vuelve el cursor a su estado normal
+            tput cnorm #Vuelve el cursor a su estado normal.
             exit 1 #Usa un número (1-255) para el código de error.
         }
         echo -e "\033[4;30m\033[1;35mVuelva pronto\033[0m \033[1;35m^^\033[0m" && sleep 1.5s && trap ctrl_c SIGINT && clear
