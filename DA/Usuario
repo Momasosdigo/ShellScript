@@ -29,13 +29,13 @@ function user() { clear
             ;;
             
             3)
-                unset "$op_user"
+                unset "$op_user" #[ unset ] borra la variable en memoria al salir de la funcion. 
                 ( exec "./Script.sh" )
                 #Con el comando [ exec ] reemplaza al Shell sin crear un nuevo proceso. 
                 #Sin embargo, podemos ponerlo en una SubShell, la cual usara 
                 #un porcentaje de procesador y ram, para usar esto es 
                 #quitando el comando [ exec ] y dejando solo los paréntesis y el path del script:
-                #[ ( "./Script.sh" ) ]
+                #[ ( "./Script.sh" ) ].
                 #(La segunda opción es buena idea usarla en caso que se dese ejecutar tareas pesadas)
             ;;
 
