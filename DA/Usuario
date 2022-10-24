@@ -29,6 +29,7 @@ function user() { clear
             ;;
             
             3)
+                unset "$op_user"
                 ( exec "./Script.sh" )
                 #Con el comando [ exec ] reemplaza al Shell sin crear un nuevo proceso. 
                 #Sin embargo, podemos ponerlo en una SubShell, la cual usara 
