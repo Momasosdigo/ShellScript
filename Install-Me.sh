@@ -31,7 +31,7 @@ if [ ! -d "$dir" ]; then #Verificación de creacion de directorio no existente
 
         [Nn]* )
             echo
-            echo "[ Se ha denegado con exito la instalacion... ]"
+            echo -e "[ Se ha \033[4;91mdenegado\033[0m con exito la instalacion... ]"
             sleep 0.45s
             exit
         break;;
@@ -39,7 +39,7 @@ if [ ! -d "$dir" ]; then #Verificación de creacion de directorio no existente
         *)
             clear
             echo
-            echo -e "\e[1;35m\033[4mNo es una opcion lo que intentas\e[0m\033[0m"
+            echo -e "\033[4;35mNo es una opcion lo que intentas\e[0m"
             echo
             sleep 2s
             clear
@@ -57,5 +57,5 @@ elif [ -d "$dir" ]; then
     sleep 1s
     open $HOME/"$dir"/DATOS/
 else
-    echo -e "\e[1;35m\033[4m[ Se produjo un error al momento de instalar... ]\e[0m\033[0m"
+    echo -e "\033[5m\033[1;31m[ Se produjo un error al momento de instalar... ]\e[0m"
 fi

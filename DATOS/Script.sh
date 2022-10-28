@@ -62,7 +62,7 @@ while [ "$op_central" != 5 ]; do
     *)
         clear
         echo
-        echo -e "\e[1;35m\033[4mNo es una opcion lo que intentas\e[0m\033[0m"
+        echo -e "\033[4;35mNo es una opcion lo que intentas\e[0m"
         echo
         sleep 2s
         clear
