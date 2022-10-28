@@ -36,35 +36,28 @@ while [ "$op_central" != 5 ]; do
         #Indicando la carpeta en dodne se encuentra los demas script, ya es suficiente para
         #ejecutarlos, no es necesario el darles la extencion [ .sh ] puesto que nuestro main
         #se encarga de darle todo parametros necesarios sin necesidad de hacerlo nosotros.
-    ;;
+    break;;
 
     2) #De menu principal
         sleep 1s
         source DA/Tareas
-    ;;
+    break;;
 
     3) #De menu principal
         sleep 1s
         source DA/IniciarYdetener
-    ;;
+    break;;
 
     4) #De menu principal
         sleep 1s
         source DA/SQL
-    ;;
+    break;;
 
     5) #De menu principal
-        #Controlador de eventos CTRL+C
-        function ctrl_c() {
-            tput cnorm #Vuelve el cursor a su estado normal.
-            exit 1 #Usa un número (1-255) para el código de error.
-        }
-        echo -e "\033[4;30m\033[1;35mVuelva pronto\033[0m \033[1;35m^^\033[0m" && sleep 1.5s && trap ctrl_c SIGINT && clear
-        #[ trap ] recibe cualquier señar de la terminal cuando cualquier evento ocurre
-        #y envía una notificación, en este caso cuando se entra en la función y risible la señal
-        #mas común que es [ SIGINT (Signal Interrupt) ] y funciona como un CTRL+C.
-        #Aun trabajo para solucionar el problema y por el momento usaremos este formato mas intrusivo para salir.
-    ;;
+        echo -e "\033[4;30m\033[1;35mVuelva pronto\033[0m \033[1;35m^^\033[0m"
+        sleep 1.5s
+        exit
+    break;;
 
     *)
         clear
@@ -75,6 +68,5 @@ while [ "$op_central" != 5 ]; do
         clear
         [ "$op_central" = true ]
     ;;
-
     esac #Final case principal
 done #Final while principal
