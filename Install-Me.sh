@@ -10,16 +10,16 @@ echo -e "\e[0;36m|\e[0m \033[5m[+]\033[0m No finalizar con '/' el directorio des
 echo -e "\e[0;36m*-------------------------------------------------------*\e[0m"
 read -r -p "Directorio destino $HOME/ => " dir
 
-if [ ! -d "$dir" ]; then #Verificación de creacion de directorio no existente
+if [ ! -d "$dir" ]; then #Verificación de creación de directorio no existente
     echo "El directorio no existe, ¿desea crear uno con el nombre propuesto?"
     read -r -p "[Yy] / [Nn] => " op
 
     while [ "$op" ]; do
         case "$op" in
         [Yy]* )
-            #Usando el fomrato ( [Yy]* ) permite escribir:
+            #Usando el formato ( [Yy]* ) permite escribir:
             #y, Y, yes, Yes, YEs, YES, yES, yeS
-            #Lo mismo pasa con la version contraria de negacion
+            #Lo mismo pasa con la versión contraria de negación
             echo
             echo "[ El directorio se creará a continuacion... ]"
             mv DATOS/ $HOME/"$dir"

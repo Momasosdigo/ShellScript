@@ -30,30 +30,30 @@ while [ "$op_central" != 5 ]; do
     echo
 
     case $op_central in
-    1) #De menu principal
+    1) #De menú principal
         sleep 1s
         source DA/Usuario
-        #Indicando la carpeta en dodne se encuentra los demas script, ya es suficiente para
-        #ejecutarlos, no es necesario el darles la extencion [ .sh ] puesto que nuestro main
-        #se encarga de darle todo parametros necesarios sin necesidad de hacerlo nosotros.
+        #Indicando la carpeta en donde se encuentra los demás script, ya es suficiente para
+        #ejecutarlos, no es necesario el darles la extensión [ .sh ] puesto que nuestro main
+        #se encarga de darle todo parámetros necesarios sin necesidad de hacerlo nosotros.
     break;;
 
-    2) #De menu principal
+    2) #De menú principal
         sleep 1s
         source DA/Tareas
     break;;
 
-    3) #De menu principal
+    3) #De menú principal
         sleep 1s
         source DA/IniciarYdetener
     break;;
 
-    4) #De menu principal
+    4) #De menú principal
         sleep 1s
         source DA/SQL
     break;;
 
-    5) #De menu principal
+    5) #De menú principal
         echo -e "\033[4;30m\033[1;35mVuelva pronto\033[0m \033[1;35m^^\033[0m"
         sleep 1.5s
         exit
