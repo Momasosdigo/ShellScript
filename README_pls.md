@@ -9,5 +9,5 @@ al usuario crear dicho documento
 pudo llegar a la lamentable conclusión de que algunas versiones contiene errores los cuales no se han encontrado
 solución hasta la fecha
 
-#Importante
+# Importante
 Odio el trabajo en equipo
