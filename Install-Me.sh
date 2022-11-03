@@ -26,7 +26,7 @@ if [ ! -d "$dir" ]; then #Verificación de creación de directorio no existente
             sudo chmod +x $HOME/"$dir"/DATOS/Script.sh
             echo "[ Se abrira el directorio en un momento... ]"
             sleep 1s
-            open $HOME/"$dir"/DATOS/
+            open $HOME/"$dir"/DATOS
         break;;
 
         [Nn]* )
