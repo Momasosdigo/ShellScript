@@ -40,8 +40,7 @@ function iYd() { clear
             ;;
 
             3)
-                echo "Puedes abrir el administrador de tareas anterior y comprobar nuevamente el PID"
-                echo "en caso que desees abrir un programa"
+                echo "Ingrese el nombre de la aplicacion la cual desea lanzar"
                 read -r -p "Nombre => " ap
                 ( exec "$ap" )
                 echo
