@@ -22,8 +22,8 @@ if [ ! -d "$dir" ]; then #Verificación de creación de directorio no existente
             #Lo mismo pasa con la versión contraria de negación
             echo
             echo "[ El directorio se creará a continuacion... ]"
-            mv DATOS/ $HOME/"$dir"
-            sudo chmod +x $HOME/"$dir"/DATOS/*
+            mv DATOS/ $HOME/"$dir"/
+            sudo chmod +x $HOME/"$dir"/DATOS/Script.sh
             echo "[ Se abrira el directorio en un momento... ]"
             sleep 1s
             open $HOME/"$dir"/DATOS/
