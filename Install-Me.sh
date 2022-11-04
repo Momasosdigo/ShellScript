@@ -22,11 +22,11 @@ if [ ! -d "$dir" ]; then #Verificación de creación de directorio no existente
             #Lo mismo pasa con la versión contraria de negación
             echo
             echo "[ El directorio se creará a continuacion... ]"
-            mv DATOS/ $HOME/"$dir"/
-            sudo chmod +x $HOME/"$dir"/DATOS/Script.sh
+            mv DATOS/ $HOME/"$dir/"
+            sudo chmod +x $HOME/"$dir/"DATOS/Script.sh
             echo "[ Se abrira el directorio en un momento... ]"
             sleep 1s
-            open $HOME/"$dir"/DATOS
+            open $HOME/"$dir"/DATOS/
         break;;
 
         [Nn]* )
@@ -43,7 +43,7 @@ if [ ! -d "$dir" ]; then #Verificación de creación de directorio no existente
             echo
             sleep 2s
             clear
-        ;;
+        break;;
         esac
     done #Final de verificación
 
@@ -51,11 +51,11 @@ elif [ -d "$dir" ]; then
     echo
     echo "El directorio si existe.."
     sleep 1s
-    mv DATOS/ $HOME/"$dir"
-    sudo chmod +x $HOME/"$dir"/DATOS/*
+    mv DATOS/ $HOME/"$dir/"
+    sudo chmod +x $HOME/"$dir/"DATOS/Script.sh
     echo "Se abrira el directorio en un momento..."
     sleep 1s
-    open $HOME/"$dir"/DATOS/
+    open $HOME/"$dir/"DATOS/
 else
     echo -e "\033[5m\033[1;31m[ Se produjo un error al momento de instalar... ]\e[0m"
 fi
