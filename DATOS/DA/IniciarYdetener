@@ -25,7 +25,6 @@ function iYd() { clear
                     #que los procesos 387, 792 y 1031 rompen el sistema.
                 else
                     kill "$pid"
-                    #La idea de usar [ killall ] es matar todo el árbol de proceso de dicha app.
                 fi
                 echo
             ;;
